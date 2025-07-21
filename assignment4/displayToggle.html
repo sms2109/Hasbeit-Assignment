@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toggle Theme</title>
+  <style>
+    .day {
+      background-color: white;
+      color: black;
+    }
+    .night {
+      background-color: black;
+      color: gold;
+    }
+    .button_night {
+      background-color: darkblue;
+      border: 2px solid white;
+      color: white;
+    }
+    .button_day {
+      background-color: white;
+      color: black;
+    }
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+    #app {
+      height: 100%;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="day">
+    <p>I am a HasheBit student, ready to become a awesome full stack developer</p>
+    <button onclick="swapTheme()" id="swap" class="button_day">🌙 Toggle Theme</button>
+  </div>
+
+  <script>
+    function swapTheme() {
+      const app = document.getElementById("app");
+      const button = document.getElementById("swap");
+
+      if (app.classList.contains("day")) {
+        // Switch to night mode
+        app.classList.remove("day");
+        app.classList.add("night");
+
+        button.classList.remove("button_day");
+        button.classList.add("button_night");
+
+        button.innerHTML = "🌞 Toggle Theme";
+      } else {
+        // Switch to day mode
+        app.classList.remove("night");
+        app.classList.add("day");
+
+        button.classList.remove("button_night");
+        button.classList.add("button_day");
+
+        button.innerHTML = "🌙 Toggle Theme";
+      }
+    }
+  </script>
+</body>
+</html>

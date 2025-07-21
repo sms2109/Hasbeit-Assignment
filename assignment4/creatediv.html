@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Div Example</title>
+  <style>
+    /* Style for the container */
+    #container {
+      border: 2px solid black;
+      padding: 10px;
+      margin: 20px;
+    }
+
+    /* Style for the new divs */
+    .new-div {
+      background-color: lightblue;
+      margin: 10px 0;
+      text-align: center;
+      line-height: 1.5;
+      font-family: Arial, sans-serif;
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <script>
+    // Write your code here
+    function createDiv(width, height, text) {
+        // 1. Create a new div element
+        const newDiv = document.createElement("div");
+
+        // 2. Add some CSS styles using width and height
+        newDiv.style.width = width + "px";    // Convert width to px
+        newDiv.style.height = height + "px";  // Convert height to px
+
+        // 3. Set the text inside the div
+        newDiv.textContent = text;
+
+        // 4. Add a class to style the div
+        newDiv.classList.add("new-div");
+
+        // 5. Find the #container div and add new div inside it
+        const container = document.getElementById("container");
+        container.appendChild(newDiv);
+    }
+
+    // Do not change this code
+    window.createDiv = createDiv;
+  </script>
+
+</body>
+</html>

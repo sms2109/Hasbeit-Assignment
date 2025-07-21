@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Paragraph Visibility</title>
+  <style>
+    /* Optional: some basic styling */
+    #useless-paragraph {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      border: 2px solid black;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1>I am a headline made with HTML</h1>
+  <br />
+  <p id="useless-paragraph">Useless paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. A enim, distinctio nostrum repellat quaerat dolores temporibus vel illum porro quis aperiam dignissimos iste aliquid inventore est tenetur minima officiis magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugit doloremque, laboriosam repellendus voluptate eveniet. Qui cumque facilis doloremque repudiandae ut quam omnis, sequi minima sapiente molestias assumenda consequuntur incidunt.
+  Praesentium maiores, dolor rerum earum voluptatibus hic voluptates nesciunt blanditiis exercitationem consequuntur rem ex, modi animi in culpa et ipsum ut ad eius. Soluta, nihil quidem reiciendis possimus dolores unde.
+  Voluptatem eligendi aut labore numquam, maiores inventore assumenda, aperiam iusto porro voluptatum blanditiis non fugit, at odio corporis ut doloribus illo explicabo vitae. Sint voluptatem maiores recusandae praesentium, consequuntur quam!
+  Beatae facere vero veniam nemo quibusdam explicabo quisquam unde quis dicta ratione dolores error temporibus odio, cum adipisci. Officiis quibusdam repudiandae, consectetur eos exercitationem est sequi. Saepe, odit facilis. Totam.</p>
+  <br />
+  <button onclick="toggleVisibility()">Toggle Button</button>
+
+  <script>
+    // Write your code here
+    function toggleVisibility() {
+        // 1. Get the paragraph element by its ID
+        const para = document.getElementById("useless-paragraph");
+
+        // 2. Check its current display style
+        if (para.style.display === "none") {
+            // If hidden, show it
+            para.style.display = "block";
+        } else {
+            // If shown, hide it
+            para.style.display = "none";
+        }
+    }
+  </script>
+
+</body>
+</html>
